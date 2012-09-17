@@ -1,0 +1,16 @@
+{
+  "author": {
+    "name": "James Huston"
+  },
+  "name": "HttpInputModule",
+  "description": "HttpInputModuel",
+  "version": "0.0.1",
+  "main": "./index.js",
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "readme": "RV Node Serviceability Runner",
+  "_id": "HttpInputModule@0.0.1",
+  "_from": "HttpInputModule",
+  "private": "false"
+}
