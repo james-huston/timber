@@ -1,5 +1,6 @@
 
 var consoleLogger = {};
+
 consoleLogger.log = function(message) {
     console.log('console: ' + message);
 }
@@ -9,8 +10,16 @@ function messageCallback(err, message) {
         return;
     }
 
+    var messageString = '';
+
+    if (Buffer.isBuffer(message)) {
+        messageString = message.toString();
+    } else if (typeof message === 'object') {
+        messageString = message.toString();
+    }
+
     for(var i = 0; i < writerArray.length; i++) {
-        writerArray[i].log(JSON.stringify(message));
+        writerArray[i].log(messageString);
     }
 }
 
